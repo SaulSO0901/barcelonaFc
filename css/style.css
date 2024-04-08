@@ -1,0 +1,165 @@
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+#main {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+
+  font-weight: 500;
+  font-size: larger;
+}
+
+
+
+#get {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: auto;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 275px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  background-color: rgb(255, 153, 0);
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(234, 234, 234);
+  text-align: center;
+}
+
+.card-img {
+  background-color: rgb(255, 255, 255);
+  border-style: hidden;
+  border-width: 0px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+}
+
+.card-img img {
+  width: 120px;
+  height: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 100%;
+}
+
+
+.card p {
+  height: 1px;
+  color: rgb(255, 255, 255);
+}
+
+.card h2 {
+  height: 2px;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.logo {
+  max-width: 30px;
+  max-height: 30px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#season {
+  display: flex;
+  flex-direction: column;
+  width: 81%;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+
+#title {
+  text-align: center;
+  border-color: rgb(229, 229, 229);
+  border-style: solid;
+  border-width: 0.7px;
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 1px;
+}
+
+#title h1 {
+  font-size: 72px;
+
+  
+}
+
+#matches {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  
+}
+
+#matches p {
+  text-align: center;
+}
+
+
+
+.goals {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  max-width: 100%;
+  align-items: center;
+  border-color: rgb(229, 229, 229);
+  border-style: solid;
+  border-width: 0.7px;
+  border-top: 1px;
+  border-right: 1px;
+  border-left: 1px;
+}
+.goals p {
+  width: 15%;
+height: 30px;
+  margin-top: auto;
+ margin-bottom: auto;
+ 
+  border-color: rgb(229, 229, 229);
+  border-style: solid;
+  border-width: 0.7px;
+  border-top: 1px;
+  border-left: 1px;
+  border-bottom: 1px;
+}
+
+.goals h2 {
+margin-left: 2%;
+margin-right: 2%;
+  
+}
+
+
+.home {
+  max-width: 120px;
+  height: 60px;
+  margin-left: 2%;
+ margin-top: auto;
+ margin-bottom: auto;
+}
+
+
+
+.away {
+  max-width: 120px;
+  height: 60px;
+ margin-top: auto;
+ margin-bottom: auto;
+}
+
