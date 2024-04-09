@@ -7,7 +7,6 @@ body {
   margin-left: auto;
   margin-right: auto;
   background-color: white;
-
   font-weight: 500;
   font-size: larger;
 }
@@ -15,20 +14,18 @@ body {
 
 
 #get {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
+  display: flex;
+  flex-direction:column;
   margin: auto;
   justify-content: center;
 }
 
 .card {
   display: flex;
-  flex-direction: column;
-  width: 275px;
-  margin-left: 12px;
-  margin-bottom: 12px;
+  flex-direction: row;
+  width:100%;
   border-radius: 5px;
-  background-color: rgb(255, 153, 0);
+  background-color: rgb(255, 198, 41);
   border-style: solid;
   border-width: 1px;
   border-color: rgb(234, 234, 234);
@@ -39,12 +36,11 @@ body {
   background-color: rgb(255, 255, 255);
   border-style: hidden;
   border-width: 0px;
-  border-top-left-radius: 9px;
-  border-top-right-radius: 9px;
+  
 }
 
 .card-img img {
-  width: 120px;
+  max-width: 160px;
   height: 120px;
   margin-left: auto;
   margin-right: auto;
@@ -54,24 +50,46 @@ body {
 
 
 .card p {
-  height: 1px;
+  max-width: 150px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 30px;
   color: rgb(255, 255, 255);
 }
 
 .card h2 {
-  height: 2px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 24px;
   color: rgb(255, 255, 255);
 }
+.player-data{
+  display:flex;
+  flex-direction: row;
+  width:400px;
+  margin-left: 30px;
+}
+.player-data h2{
+ width: 280px;
+}
+.player-data p{
+  width: 70px;
+ }
+ 
+ .stats{
+  display: flex;
+  flex-direction: row;
+  max-width:100%;
 
-
+ }
 
 .logo {
   max-width: 30px;
   max-height: 30px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 30px;
+  margin-top: auto;
+  margin-bottom: auto;
+  
 }
 
 #season {
@@ -128,9 +146,9 @@ body {
 .goals p {
   width: 15%;
 height: 30px;
+font-size: larger;
   margin-top: auto;
  margin-bottom: auto;
- 
   border-color: rgb(229, 229, 229);
   border-style: solid;
   border-width: 0.7px;
@@ -149,7 +167,7 @@ margin-right: 2%;
 .home {
   max-width: 120px;
   height: 60px;
-  margin-left: 2%;
+  margin-left: 10%;
  margin-top: auto;
  margin-bottom: auto;
 }
@@ -163,3 +181,56 @@ margin-right: 2%;
  margin-bottom: auto;
 }
 
+@media only screen and (max-width: 1024px) {
+  /* For tablets: */
+.card p{
+  max-width:80px;
+  margin-left:30px;
+  font-size: medium;
+}
+.player-data{
+  width: 240px;
+ font-size: medium;
+}
+
+.logo{
+  margin-left: 10px;
+}
+  
+}
+
+@media only screen and (max-width: 905px) {
+  /* For tablets: */
+.card p{
+  max-width:60px;
+  margin-left:15px;
+  font-size: medium;
+}
+
+  
+}
+@media only screen and (max-width: 680px) {
+  /* For tablets: */
+  
+.player-data{
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+  margin-left: 0px;
+  text-align: left;
+}
+.player-data h2{
+  width: fit-content;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  font-size: medium;
+}
+.player-data p{
+  margin-top: 0px;
+  margin-left: 0px;
+  font-size: small;
+}
+.stats{
+  display: none;
+}
+}

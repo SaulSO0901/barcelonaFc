@@ -25,11 +25,16 @@
 
         const $imageContainer = document.createElement("div");
         $imageContainer.classList.add('card-img');
+        
+        const $pDataContainer = document.createElement("div");
+        $pDataContainer.classList.add('player-data');
+
         const $titleElement = document.createElement("h2");
         const $imageElement = document.createElement("img");
         const $ageElement = document.createElement("p")
         const $natElement = document.createElement("p")
-        const $statsElement = document.createElement("p")
+        const $statsContainer = document.createElement("div")
+        $statsContainer.classList.add('stats');
         const $posElement = document.createElement("p")
         const $appereanceElement = document.createElement("p")
         const $goalsElement = document.createElement("p")
@@ -42,7 +47,6 @@
         $imageElement.src = `${el.player.photo}`;
         $ageElement.innerHTML=`Age: ${el.player.age}`;
         $natElement.innerHTML=`Nationality: ${el.player.nationality}`;
-        $statsElement.innerHTML=`Statistics`;
         $posElement.innerHTML=`Position: ${el.statistics[0].games.position}`;
         $appereanceElement.innerHTML=`Appereances: ${el.statistics[0].games.appearences}`;
         $goalsElement.innerHTML=`Goals: ${el.statistics[0].goals.total}`;
@@ -59,14 +63,20 @@
         
           $imageContainer.appendChild($imageElement);
           $card.appendChild($imageContainer);
-          $card.appendChild($titleElement);
-          $card.appendChild($ageElement);
-          $card.appendChild($natElement);
-          $card.appendChild($posElement);
-          $card.appendChild($appereanceElement);
-          $card.appendChild($goalsElement);
-          $card.appendChild($passElement);
-          $card.appendChild($logoElement);
+         
+          $pDataContainer.appendChild($titleElement);
+          $pDataContainer.appendChild($natElement);
+          $pDataContainer.appendChild($logoElement);
+          $card.appendChild($pDataContainer);
+
+          $statsContainer.appendChild($ageElement);
+          $statsContainer.appendChild($posElement);
+          $statsContainer.appendChild($appereanceElement);
+          $statsContainer.appendChild($goalsElement);
+          $statsContainer.appendChild($passElement);
+        
+          $card.appendChild($statsContainer);
+     
 
 
      $fragmentPlayers.appendChild($card);
