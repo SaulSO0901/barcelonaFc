@@ -1,31 +1,221 @@
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(44, 9, 83);
+  background-image: url("https://wallpaper.dog/large/962813.jpg");
 }
 
 #main {
-  max-width: 1400px;
+  max-width: 1500px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  font-weight: 500;
+  background-color: rgb(64, 11, 126);
+  font-weight: 400;
   font-size: larger;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+color:rgb(87, 87, 87);
+}
+.title {
+  width: 100%;
+  height:150px;
+  text-align: center;
+  border-color: rgb(229, 229, 229);
+  border-style: solid;
+  border-width: 0.7px;
+  border-bottom: 1px;
+  border-right: 1px;
+  border-left: 1px;
+  background-color: rgb(255, 255, 255);
 }
 
+.title h1 {
+  margin-left:auto;
+  margin-right:auto;
+  font-size: 72px;
+}
+#history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+.container-history {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(234, 234, 234);
+}
+.image-container-history {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image-container-history img {
+  width: 700px;
+  height:80%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-right: 44px;
+  border-radius: 3px;
+}
+
+.text-container-history {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+ 
+  text-align: justify;
+}
+.text-container-history h1 {
+  font-size: x-large;
+  text-align: center;
+}
+.text-container-history p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(234, 234, 234);
+  background-color: rgb(255, 255, 255);
+}
+.image-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.image-container img {
+  width: 70%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 44px;
+  margin-bottom: 44px;
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: justify;
+  background-color: rgb(255, 255, 255);
+}
+.text-container h1 {
+  font-size: x-large;
+  text-align: center;
+}
+.text-container p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.row h1 {
+  text-align: center;
+}
+.trophy {
+  width: 20%;
+  margin-top: 44px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(234, 234, 234);
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+}
+.trophy img {
+  width: 80%;
+}
+.trophy p {
+ font-size: medium;
+}
+.trophy h2 {
+  height: 60px;
+}
+#image-container-messi {
+  display:flex;
+  width: 100%;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/352/819/741/soccer-lionel-messi-argentinian-fc-barcelona-wallpaper-b940a86da11a1d2b566718cf7051a6dd.jpg");
+ 
+}
+#image-container-messi img {
+  width: 100%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#image-container-title {
+  display:flex;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+#image-container-title img {
+ 
+  width: 95%;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+border-radius: 3px;
+}
+.list-messi{
+width:500px;
+margin-left: auto;
+margin-right: auto;
+text-align:center;
+}
+
+.list-messi h1{
+width: fit-content;
 
 
+  }
+.list-messi p{
+
+  }
+#players-title {
+  
+}
 #get {
   display: flex;
-  flex-direction:column;
-  margin: auto;
+  flex-direction: column;
+  margin-right: 44px;
+  margin-left: 44px;
   justify-content: center;
+  background-color: rgb(255, 255, 255);
 }
 
 .card {
   display: flex;
   flex-direction: row;
-  width:100%;
+  width: 100%;
   border-radius: 5px;
-  background-color: rgb(255, 198, 41);
+  background-color: rgb(127, 58, 255);
   border-style: solid;
   border-width: 1px;
   border-color: rgb(234, 234, 234);
@@ -36,7 +226,6 @@ body {
   background-color: rgb(255, 255, 255);
   border-style: hidden;
   border-width: 0px;
-  
 }
 
 .card-img img {
@@ -47,7 +236,6 @@ body {
   margin-top: 10px;
   border-radius: 100%;
 }
-
 
 .card p {
   max-width: 150px;
@@ -63,72 +251,54 @@ body {
   margin-left: 24px;
   color: rgb(255, 255, 255);
 }
-.player-data{
-  display:flex;
-  flex-direction: row;
-  width:400px;
-  margin-left: 30px;
-}
-.player-data h2{
- width: 280px;
-}
-.player-data p{
-  width: 70px;
- }
- 
- .stats{
+.player-data {
   display: flex;
   flex-direction: row;
-  max-width:100%;
+  width: 400px;
+  margin-left: 30px;
+}
+.player-data h2 {
+  width: 280px;
+}
+.player-data p {
+  width: 70px;
+}
 
- }
+.stats {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
 
 .logo {
   max-width: 30px;
   max-height: 30px;
-  margin-left: 30px;
+  margin-left: 50px;
   margin-top: auto;
   margin-bottom: auto;
-  
 }
 
 #season {
   display: flex;
   flex-direction: column;
-  width: 81%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
- 
+
+  background-color: rgb(255, 255, 255);
 }
 
-#title {
-  text-align: center;
-  border-color: rgb(229, 229, 229);
-  border-style: solid;
-  border-width: 0.7px;
-  border-top: 1px;
-  border-right: 1px;
-  border-left: 1px;
-}
 
-#title h1 {
-  font-size: 72px;
-
-  
-}
 
 #matches {
   display: flex;
   flex-direction: column;
   max-width: 100%;
-  
 }
 
 #matches p {
   text-align: center;
 }
-
-
 
 .goals {
   display: flex;
@@ -145,10 +315,10 @@ body {
 }
 .goals p {
   width: 15%;
-height: 30px;
-font-size: larger;
+  height: 30px;
+  font-size: larger;
   margin-top: auto;
- margin-bottom: auto;
+  margin-bottom: auto;
   border-color: rgb(229, 229, 229);
   border-style: solid;
   border-width: 0.7px;
@@ -158,79 +328,86 @@ font-size: larger;
 }
 
 .goals h2 {
-margin-left: 2%;
-margin-right: 2%;
-  
+  margin-left: 2%;
+  margin-right: 2%;
 }
-
 
 .home {
   max-width: 120px;
   height: 60px;
   margin-left: 10%;
- margin-top: auto;
- margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
-
 
 .away {
   max-width: 120px;
   height: 60px;
- margin-top: auto;
- margin-bottom: auto;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1150px) {
   /* For tablets: */
-.card p{
-  max-width:80px;
-  margin-left:30px;
-  font-size: medium;
-}
-.player-data{
-  width: 240px;
- font-size: medium;
-}
+  .card p {
+    max-width: 80px;
+    margin-left: 30px;
+    font-size: medium;
+  }
+  .player-data {
+    width: 240px;
+    font-size: medium;
+  }
 
-.logo{
-  margin-left: 10px;
-}
-  
+  .logo {
+    margin-left: 10px;
+  }
 }
 
 @media only screen and (max-width: 905px) {
   /* For tablets: */
-.card p{
-  max-width:60px;
-  margin-left:15px;
-  font-size: medium;
+  .card h2 {
+    margin-left: 0px;
+    width: fit-content;
+    font-size: medium;
+  }
+  .card p {
+    max-width: 60px;
+    margin-left: 15px;
+    font-size: medium;
+  }
 }
-
-  
+@media only screen and (max-width: 730px) {
+  /* For tablets: */
+ 
+  .card p {
+    max-width: 60px;
+    margin-left: 10px;
+    font-size: small;
+  }
 }
 @media only screen and (max-width: 680px) {
   /* For tablets: */
-  
-.player-data{
-  display: flex;
-  flex-direction: column;
-  min-width: 100px;
-  margin-left: 0px;
-  text-align: left;
-}
-.player-data h2{
-  width: fit-content;
-  margin-left: 0px;
-  margin-bottom: 0px;
-  font-size: medium;
-}
-.player-data p{
-  margin-top: 0px;
-  margin-left: 0px;
-  font-size: small;
-}
-.stats{
-  display: none;
-}
+
+  .player-data {
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    margin-left: 0px;
+    text-align: left;
+  }
+  .player-data h2 {
+    width: fit-content;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    font-size: medium;
+  }
+  .player-data p {
+    margin-top: 0px;
+    margin-left: 0px;
+    font-size: small;
+  }
+  .stats {
+    display: none;
+  }
 }
