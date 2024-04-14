@@ -1,23 +1,89 @@
 body {
-  background-color: rgb(44, 9, 83);
-  background-image: url("https://wallpaper.dog/large/962813.jpg");
+  margin: 0;
+  /* Remove body margins */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: larger;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90px;
+ justify-content: space-between;
+  background-color: rgb(9, 8, 54);
+}
+
+#navbar-logo {
+  display: flex;
+  flex-direction: row;
+  width: 15%;
+  height: 90%;
+
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+}
+#navbar-logo:hover {
+  background-color: rgb(15, 14, 88);
+  box-shadow: 0 10px 0 0 rgb(255, 193, 21); /* Border bottom */
+  cursor: pointer;
+}
+
+
+#navbar-links {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+margin-right:auto ;
+
+}
+
+.navbar-link {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+  justify-content: center;
+  padding: 0;
+
+}
+
+.navbar-link a {
+  margin: auto;
+  font-weight: 600;
+  font-size: medium;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+
+}
+
+.navbar-link:hover {
+  background-color: rgb(15, 14, 88);
+  box-shadow: 0 10px 0 0 rgb(255, 193, 21); /* Border bottom */
+  cursor: pointer;
+}
+
+.side-menu {
+  display: none;
 }
 
 #main {
-  max-width: 1500px;
+  max-width: 1600px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgb(64, 11, 126);
-  font-weight: 400;
-  font-size: larger;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-color:rgb(87, 87, 87);
+  color: rgb(87, 87, 87);
 }
+
 .title {
   width: 100%;
-  height:150px;
+  height: 150px;
+  margin-bottom:44px;
   text-align: center;
   border-color: rgb(229, 229, 229);
   border-style: solid;
@@ -29,10 +95,68 @@ color:rgb(87, 87, 87);
 }
 
 .title h1 {
-  margin-left:auto;
-  margin-right:auto;
-  font-size: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 77px;
+  background: linear-gradient(120deg, rgb(98, 56, 133) 40%, rgb(233, 70, 70) 60%, rgb(224, 76, 76) 92%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
+.container-intro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Catalonia.svg/2000px-Flag_of_Catalonia.svg.png");
+}
+
+.image-container-intro {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.image-container-intro img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  border-radius: 3px;
+}
+
+.text-container-intro {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  background-color: white;
+}
+.text-container-intro h1 {
+  font-size: 72px;
+  text-align: center;
+  background: linear-gradient(120deg, rgb(50, 39, 206) 40%, rgb(255, 52, 52) 77%, rgb(228, 20, 20) 92%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.text-container-intro p {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
 #history {
   display: flex;
   flex-direction: column;
@@ -42,6 +166,7 @@ color:rgb(87, 87, 87);
   border-color: rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
 }
+
 .container-history {
   display: flex;
   flex-direction: row;
@@ -51,41 +176,51 @@ color:rgb(87, 87, 87);
   border-style: solid;
   border-width: 1px;
   border-color: rgb(234, 234, 234);
+
+
 }
+
 .image-container-history {
   display: flex;
   flex-direction: row;
   width: 100%;
   border-radius: 10px;
+
+
 }
 
 .image-container-history img {
   width: 700px;
-  height:80%;
-  margin-top: auto;
-  margin-bottom: auto;
+  height: 80%;
+  margin: auto;
   padding-top: 22px;
-  padding-bottom: 22px;
-  padding-right: 44px;
   border-radius: 3px;
+
 }
 
 .text-container-history {
   display: flex;
   flex-direction: column;
   width: 100%;
- 
   text-align: justify;
+
 }
+
 .text-container-history h1 {
   font-size: x-large;
   text-align: center;
+  background: linear-gradient(120deg, rgb(50, 39, 206) 40%, rgb(255, 52, 52) 77%, rgb(228, 20, 20) 92%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 .text-container-history p {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .container {
   display: flex;
   flex-direction: column;
@@ -97,10 +232,12 @@ color:rgb(87, 87, 87);
   border-color: rgb(234, 234, 234);
   background-color: rgb(255, 255, 255);
 }
+
 .image-container {
   display: flex;
   flex-direction: row;
   width: 100%;
+
 }
 
 .image-container img {
@@ -108,6 +245,7 @@ color:rgb(87, 87, 87);
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+
 }
 
 .text-container {
@@ -123,22 +261,27 @@ color:rgb(87, 87, 87);
   text-align: justify;
   background-color: rgb(255, 255, 255);
 }
+
 .text-container h1 {
   font-size: x-large;
   text-align: center;
 }
+
 .text-container p {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
+
 .row {
   display: flex;
   flex-direction: row;
 }
+
 .row h1 {
   text-align: center;
 }
+
 .trophy {
   width: 20%;
   margin-top: 44px;
@@ -147,60 +290,65 @@ color:rgb(87, 87, 87);
   border-color: rgb(234, 234, 234);
   text-align: center;
   background-color: rgb(255, 255, 255);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 60px 30px -30px;
 }
+
 .trophy img {
   width: 80%;
+  margin-top: 10px;
 }
+
 .trophy p {
- font-size: medium;
+  font-size: medium;
 }
+
 .trophy h2 {
   height: 60px;
 }
+
 #image-container-messi {
-  display:flex;
+  display: flex;
   width: 100%;
   background-image: url("https://r4.wallpaperflare.com/wallpaper/352/819/741/soccer-lionel-messi-argentinian-fc-barcelona-wallpaper-b940a86da11a1d2b566718cf7051a6dd.jpg");
- 
 }
+
 #image-container-messi img {
   width: 100%;
   height: 800px;
   margin-left: auto;
   margin-right: auto;
 }
+
 #image-container-title {
-  display:flex;
+  display: flex;
   width: 100%;
   background-color: rgb(255, 255, 255);
 }
+
 #image-container-title img {
- 
   width: 95%;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
 
-border-radius: 3px;
-}
-.list-messi{
-width:500px;
-margin-left: auto;
-margin-right: auto;
-text-align:center;
+  border-radius: 3px;
 }
 
-.list-messi h1{
-width: fit-content;
-
-
-  }
-.list-messi p{
-
-  }
-#players-title {
-  
+.list-messi {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+.list-messi h1 {
+  width: fit-content;
+}
+
+.list-messi p {}
+
+
+
 #get {
   display: flex;
   flex-direction: column;
@@ -214,66 +362,68 @@ width: fit-content;
   display: flex;
   flex-direction: row;
   width: 100%;
-  border-radius: 5px;
-  background-color: rgb(127, 58, 255);
+  border-radius: 2px;
+  background-color: rgb(255, 255, 255);
   border-style: solid;
   border-width: 1px;
-  border-color: rgb(234, 234, 234);
-  text-align: center;
-}
+  border-color: rgb(192, 190, 190);
+  text-align: left;
 
-.card-img {
-  background-color: rgb(255, 255, 255);
-  border-style: hidden;
-  border-width: 0px;
 }
 
 .card-img img {
-  max-width: 160px;
+  max-width: 140px;
+  width: 100%;
   height: 120px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
   border-radius: 100%;
 }
 
 .card p {
-  max-width: 150px;
-  margin-top: auto;
+  max-width: 190px;
+  width: 100%;
+  margin-top: 50px;
   margin-bottom: auto;
-  margin-left: 30px;
-  color: rgb(255, 255, 255);
+  font-size: large;
+  font-weight: 300;
+  color: rgb(46, 44, 44);
+
 }
 
 .card h2 {
+  max-width: 280px;
+  width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 24px;
-  color: rgb(255, 255, 255);
+  background: linear-gradient(120deg, rgb(98, 56, 133) 40%, rgb(233, 70, 70) 60%, rgb(224, 76, 76) 92%);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 .player-data {
   display: flex;
   flex-direction: row;
-  width: 400px;
-  margin-left: 30px;
+  max-width: 500px;
+  width: 100%;
 }
-.player-data h2 {
-  width: 280px;
-}
-.player-data p {
-  width: 70px;
-}
+
 
 .stats {
   display: flex;
   flex-direction: row;
-  max-width: 100%;
+  max-width: 685px;
+  width: 100%;
 }
+
+
 
 .logo {
   max-width: 30px;
   max-height: 30px;
-  margin-left: 50px;
+  margin-right: 50px;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -287,8 +437,6 @@ width: fit-content;
 
   background-color: rgb(255, 255, 255);
 }
-
-
 
 #matches {
   display: flex;
@@ -313,6 +461,7 @@ width: fit-content;
   border-right: 1px;
   border-left: 1px;
 }
+
 .goals p {
   width: 15%;
   height: 30px;
@@ -348,12 +497,14 @@ width: fit-content;
 }
 
 @media only screen and (max-width: 1150px) {
+
   /* For tablets: */
   .card p {
     max-width: 80px;
     margin-left: 30px;
     font-size: medium;
   }
+
   .player-data {
     width: 240px;
     font-size: medium;
@@ -365,27 +516,31 @@ width: fit-content;
 }
 
 @media only screen and (max-width: 905px) {
+
   /* For tablets: */
   .card h2 {
     margin-left: 0px;
     width: fit-content;
     font-size: medium;
   }
+
   .card p {
     max-width: 60px;
     margin-left: 15px;
     font-size: medium;
   }
 }
+
 @media only screen and (max-width: 730px) {
   /* For tablets: */
- 
+
   .card p {
     max-width: 60px;
     margin-left: 10px;
     font-size: small;
   }
 }
+
 @media only screen and (max-width: 680px) {
   /* For tablets: */
 
@@ -396,17 +551,20 @@ width: fit-content;
     margin-left: 0px;
     text-align: left;
   }
+
   .player-data h2 {
     width: fit-content;
     margin-left: 0px;
     margin-bottom: 0px;
     font-size: medium;
   }
+
   .player-data p {
     margin-top: 0px;
     margin-left: 0px;
     font-size: small;
   }
+
   .stats {
     display: none;
   }
