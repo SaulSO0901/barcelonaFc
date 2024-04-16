@@ -35,6 +35,7 @@
         const $natElement = document.createElement("p")
         const $statsContainer = document.createElement("div")
         $statsContainer.classList.add('stats');
+        $statsContainer.setAttribute("id",el.player.name );
         const $posElement = document.createElement("p")
         const $appereanceElement = document.createElement("p")
         const $goalsElement = document.createElement("p")
@@ -53,7 +54,6 @@
         $passElement.innerHTML=`Key Passes: ${el.statistics[0].passes.key || '0'}`;
         $teamElement.innerHTML = `Team: ${el.statistics[0].team.name}`;
         $logoElement.src = `${el.statistics[0].team.logo}`;
-
 
 //statitics
 //position
@@ -83,6 +83,7 @@
         $players.appendChild($fragmentPlayers);
          });
     } )
+
     
 
     $fragmentMatches = document.createDocumentFragment();
