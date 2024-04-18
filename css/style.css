@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  /* Remove body margins */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
@@ -27,6 +26,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+#navbar-logo img{
+  width:80px; 
+  height:80px;
+}
 
 #navbar-logo:hover {
   background-color: rgb(15, 14, 88);
@@ -49,6 +52,7 @@ body {
   flex-direction: row;
   width: 100%;
   height: 90%;
+  margin-right: 20px;
   text-align: center;
   justify-content: center;
   justify-items: center;
@@ -73,7 +77,7 @@ body {
   cursor: pointer;
 }
 
-.side-menu {
+.container-side {
   display: none;
 }
 
@@ -95,6 +99,7 @@ body {
   height: 150px;
   margin-bottom: 44px;
   padding-top: 44px;
+
   text-align: center;
   justify-items: center;
   border-color: rgb(229, 229, 229);
@@ -109,6 +114,7 @@ body {
 .title h1 {
   margin-left: auto;
   margin-right: auto;
+  
   font-size: 77px;
   background: linear-gradient(120deg, rgb(98, 56, 133) 40%, rgb(233, 70, 70) 60%, rgb(224, 76, 76) 92%);
   -webkit-background-clip: text;
@@ -137,7 +143,7 @@ body {
 }
 
 .image-container-intro img {
-  width: 250px;
+  max-width: 250px;
   height: 250px;
   margin: auto;
   border-radius: 3px;
@@ -201,7 +207,8 @@ body {
 }
 
 .image-container-history img {
-  width: 700px;
+  max-width: 700px;
+  width: 100%;
   height: 80%;
   margin: auto;
   padding-top: 22px;
@@ -294,6 +301,7 @@ body {
   width: 20%;
   margin-top: 44px;
   border-style: solid;
+  padding-bottom: 44px;
   border-width: 1px;
   border-color: rgb(234, 234, 234);
   text-align: center;
@@ -311,7 +319,11 @@ body {
 }
 
 .trophy h2 {
-  height: 60px;
+  height: 80px;
+  background: linear-gradient(120deg, rgb(98, 56, 133) 40%, rgb(233, 70, 70) 60%, rgb(224, 76, 76) 92%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .title-list {
   width: 100%;
@@ -330,17 +342,20 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  
 }
 
 #image-container-messi {
   display: flex;
+  max-width: 100%;
   width: 100%;
-  background-image: url("https://r4.wallpaperflare.com/wallpaper/352/819/741/soccer-lionel-messi-argentinian-fc-barcelona-wallpaper-b940a86da11a1d2b566718cf7051a6dd.jpg");
+  
 }
 
 #image-container-messi img {
   width: 100%;
-  height: 800px;
+  height: 900px;
+
   margin-left: auto;
   margin-right: auto;
 }
@@ -360,9 +375,12 @@ body {
 }
 
 .list-messi {
-  width: 400px;
+  
+  max-width: 400px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 44px;
   text-align: left;
 }
 
@@ -398,8 +416,8 @@ body {
 }
 
 .card-img img {
-  max-width: 140px;
-  width: 100%;
+-width: 120px;
+
   height: 120px;
   margin-left: auto;
   margin-right: auto;
@@ -407,8 +425,9 @@ body {
 }
 
 .card p {
-  max-width: 190px;
+  max-width: 130px;
   width: 100%;
+  margin-left: 15px;
   margin-top: 50px;
   margin-bottom: auto;
   font-size: large;
@@ -440,7 +459,7 @@ body {
 .stats {
   display: flex;
   flex-direction: row;
-  max-width: 685px;
+  max-width: 700px;
   width: 100%;
 }
 
@@ -468,6 +487,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 100%;
+  margin-bottom: 100px;
 }
 
 #matches p {
@@ -525,9 +545,11 @@ body {
 #footer {
   display: flex;
   flex-direction: column;
-  width: 95%;
-  height: 450px;
-  padding: 40px;
+  width: 100%;
+  height: 500px;
+  border: #090836;
+  border-style: solid;
+  border-right: 2px;
   background-color: #090836;
 }
 
@@ -540,12 +562,32 @@ body {
   justify-content: center;
 }
 
+#footer-container-social {
+  display: flex;
+  flex-direction: row;
+  max-width: 600px;
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content:space-between;
+}
+#footer-container-social i {
+  max-width:100px;
+  width:100%;
+  color: #ffffff;
+}
+
 .footer-column {
   display: flex;
   flex-direction: column;
   margin-bottom: auto;
   margin-right: 29px;
-  width: 220px;
+  max-width: 220px;
+  width: 100%;
   height: 100%;
   text-align: left;
 }
@@ -577,20 +619,30 @@ body {
 
 @media only screen and (max-width: 1150px) {
 
-  /* For tablets: */
+  .image-container-history img {
+   
+    height: 60%;
+   
+  
+  }
+ .row h2{
+  font-size: large;
+ }
   .card p {
     max-width: 80px;
-    margin-left: 30px;
-    font-size: medium;
+    width: 100%;
   }
 
-  .player-data {
-    width: 240px;
+  .player-data p {
     font-size: medium;
+  }
+  .stats p{
+    font-size: small;
   }
 
   .logo {
     margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
@@ -599,17 +651,58 @@ body {
   /* For tablets: */
   .card h2 {
     margin-left: 0px;
-    width: fit-content;
+    width: 100px;
     font-size: medium;
   }
 
   .card p {
     max-width: 60px;
+    width: 100%;
     margin-left: 15px;
-    font-size: medium;
   }
+ .player-data{
+  width:250px;
+ }
+  .logo{
+   margin-left: 20px;
+   margin-right: 0px;
+  }
+ 
 }
-
+@media only screen and (max-width: 768px) {
+  /* For tablets: */  
+   
+  #navbar-links{
+    display: none;
+  }
+ 
+.container-side{
+  display:flex;
+}
+.container-history{
+  flex-direction: column;
+}
+#footer{
+  height: fit-content;
+  padding-bottom: 20px;
+}
+#footer-container{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+#footer h3{
+  font-size: medium;
+}
+#footer a{
+font-size: small;
+}
+#footer-logo{
+  display: none;
+}
+.right{
+  margin-left: 100%;
+}
+}
 @media only screen and (max-width: 730px) {
   /* For tablets: */
 
@@ -618,11 +711,40 @@ body {
     margin-left: 10px;
     font-size: small;
   }
+ 
+  
+  
 }
 
 @media only screen and (max-width: 680px) {
   /* For tablets: */
-
+  .title h1{
+    font-size: 50px;
+  }
+  #title-history h1{
+    font-size: 50px;
+  }
+  .row{
+    flex-direction: column;
+  }
+  #image-container-title img{
+  height: 400px;
+  }
+  .trophy{
+    width: 100%;
+    height: 600px;
+    margin-top: auto;
+   
+  }
+  #image-container-messi img{
+     height: 600px;
+  }
+  .title-list h1{
+    font-size: 50px;
+  }
+  .list-messi{
+    font-size: medium;
+  }
   .player-data {
     display: flex;
     flex-direction: column;
@@ -648,3 +770,65 @@ body {
     display: none;
   }
 }
+
+
+
+
+  @media only screen and (max-width: 425px) {
+    #navbar-logo img{
+    margin-left: 15px;
+    }
+  
+    #main h1{
+       font-size: 30px;     
+      }
+      .title {
+      
+        height: 20px;
+        
+      }
+      #image-container-title img{
+        height: 200px;
+        }
+        .trophy{
+          width: 100%;
+          height: 400px;
+          margin: auto;
+        }
+        .title-list {
+          
+          height: 20px;
+         
+        }
+        #image-container-messi img{
+          height: 400px;
+       }
+      .list-messi{
+        width: 230px;
+        font-size: small;
+        }
+        #matches p{
+          font-size: medium;
+        }
+        .right{
+          margin-left: 0%;
+        }
+        .footer-column {
+          margin-right: 10px;
+          
+        }
+    }
+ 
+     
+
+
+@media only screen and (max-width: 320px) {
+#main{
+  padding-right: 5px;
+  padding-left: 5px;
+  }
+  #footer {
+   padding: 5px;
+  }
+}
+ 
