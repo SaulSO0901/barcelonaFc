@@ -19,7 +19,7 @@
         console.log(res)
 
     res.response.forEach(el => {
-        const $players = document.getElementById("get");
+        const $players = document.getElementById("players");
         const $card = document.createElement("div");
         $card.classList.add('card');
 
@@ -54,13 +54,7 @@
         $passElement.innerHTML=`Key Passes: ${el.statistics[0].passes.key || '0'}`;
         $teamElement.innerHTML = `Team: ${el.statistics[0].team.name}`;
         $logoElement.src = `${el.statistics[0].team.logo}`;
-
-//statitics
-//position
-//games
-//goals
-//asists
-        
+           
           $imageContainer.appendChild($imageElement);
           $card.appendChild($imageContainer);
          
@@ -86,7 +80,7 @@
 
     
 
-    $fragmentMatches = document.createDocumentFragment();
+
     const urlSeason = 'https://api-football-v1.p.rapidapi.com/v3/fixtures?league=140&season=2023&team=529&from=2023-09-28&to=2024-05-31';
     const optionsSeason = {
         method: 'GET',
@@ -95,7 +89,7 @@
             'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
         }
     };
-    
+    $fragmentMatches = document.createDocumentFragment();
     try {
         fetch(urlSeason,optionsSeason)
         .then(response => response.json())

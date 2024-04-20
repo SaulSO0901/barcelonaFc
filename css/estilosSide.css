@@ -45,9 +45,9 @@
 		border-bottom: 2px solid #c7c7c7;
 		padding-bottom: 5px;
 	}
-	/*Fin de Estilos para el encabezado*/
 
-	/*Menù lateral*/
+
+	/*Side menul*/
 	#btn-menu{
 		display: none;
 	}
@@ -110,4 +110,4 @@
 		cursor: pointer;
 		font-size: 18px;
 	}
-	/*Fin de Menù lateral*/
+	
