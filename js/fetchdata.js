@@ -1,151 +1,160 @@
+const url =
+  "https://api-football-v1.p.rapidapi.com/v3/players?team=529&league=140&season=2023&page=2";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "af731bc557mshd9a9dfe2c0d7552p132b4djsnbd2ecc428ef8",
+    "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+  },
+};
 
+$fragmentPlayers = document.createDocumentFragment();
 
+async function getDataPlayers() {
+  try {
+    let res = await fetch(url, options);
+    json = await res.json();
 
-    const url = 'https://api-football-v1.p.rapidapi.com/v3/players?team=529&league=140&season=2023&page=2';
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'af731bc557mshd9a9dfe2c0d7552p132b4djsnbd2ecc428ef8',
-            'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-        }
-    };
-    
-  
-    $fragmentPlayers = document.createDocumentFragment();
+    json.response.forEach((el) => {
+      const $players = document.getElementById("players");
+      const $card = document.createElement("div");
+      $card.classList.add("card");
 
-    fetch(url,options)
-    .then(response => response.json())
-    .then(res => {
-        console.log(res)
+      const $imageContainer = document.createElement("div");
+      $imageContainer.classList.add("card-img");
 
-    res.response.forEach(el => {
-        const $players = document.getElementById("players");
-        const $card = document.createElement("div");
-        $card.classList.add('card');
+      const $pDataContainer = document.createElement("div");
+      $pDataContainer.classList.add("player-data");
 
-        const $imageContainer = document.createElement("div");
-        $imageContainer.classList.add('card-img');
-        
-        const $pDataContainer = document.createElement("div");
-        $pDataContainer.classList.add('player-data');
+      const $titleElement = document.createElement("h2");
+      const $imageElement = document.createElement("img");
+      const $ageElement = document.createElement("p");
+      const $natElement = document.createElement("p");
+      const $statsContainer = document.createElement("div");
+      $statsContainer.classList.add("stats");
+      $statsContainer.setAttribute("id", el.player.name);
+      const $posElement = document.createElement("p");
+      const $appereanceElement = document.createElement("p");
+      const $appereanceMElement = document.createElement("p");
 
-        const $titleElement = document.createElement("h2");
-        const $imageElement = document.createElement("img");
-        const $ageElement = document.createElement("p")
-        const $natElement = document.createElement("p")
-        const $statsContainer = document.createElement("div")
-        $statsContainer.classList.add('stats');
-        $statsContainer.setAttribute("id",el.player.name );
-        const $posElement = document.createElement("p")
-        const $appereanceElement = document.createElement("p")
-        const $goalsElement = document.createElement("p")
-        const $passElement = document.createElement("p")
-        const $teamElement = document.createElement("p");
-        const $logoElement = document.createElement("img");
-        $logoElement.classList.add('logo');
+      $appereanceElement.classList.add("apper");
+      $appereanceMElement.classList.add("apperM");
+      const $goalsElement = document.createElement("p");
+      const $passElement = document.createElement("p");
+      const $teamElement = document.createElement("p");
+      const $logoElement = document.createElement("img");
+      $logoElement.classList.add("logo");
 
-        $titleElement.innerHTML= el.player.name;
-        $imageElement.src = `${el.player.photo}`;
-        $ageElement.innerHTML=`Age: ${el.player.age}`;
-        $natElement.innerHTML=`Nationality: ${el.player.nationality}`;
-        $posElement.innerHTML=`Position: ${el.statistics[0].games.position}`;
-        $appereanceElement.innerHTML=`Appereances: ${el.statistics[0].games.appearences}`;
-        $goalsElement.innerHTML=`Goals: ${el.statistics[0].goals.total}`;
-        $passElement.innerHTML=`Key Passes: ${el.statistics[0].passes.key || '0'}`;
-        $teamElement.innerHTML = `Team: ${el.statistics[0].team.name}`;
-        $logoElement.src = `${el.statistics[0].team.logo}`;
-           
-          $imageContainer.appendChild($imageElement);
-          $card.appendChild($imageContainer);
-         
-          $pDataContainer.appendChild($titleElement);
-          $pDataContainer.appendChild($natElement);
-          $pDataContainer.appendChild($logoElement);
-          $card.appendChild($pDataContainer);
+      $titleElement.innerHTML = el.player.name;
+      $imageElement.src = `${el.player.photo}`;
+      $ageElement.innerHTML = `Age: ${el.player.age}`;
+      $natElement.innerHTML = `Nationality:</br> ${el.player.nationality}`;
+      $posElement.innerHTML = `Position: ${el.statistics[0].games.position}`;
+      $appereanceElement.innerHTML = `Appereances:${el.statistics[0].games.appearences}`;
+      $appereanceMElement.innerHTML = `Appereances: ${el.statistics[0].games.appearences}`;
 
-          $statsContainer.appendChild($ageElement);
-          $statsContainer.appendChild($posElement);
-          $statsContainer.appendChild($appereanceElement);
-          $statsContainer.appendChild($goalsElement);
-          $statsContainer.appendChild($passElement);
-        
-          $card.appendChild($statsContainer);
-     
+      $goalsElement.innerHTML = `Goals: ${el.statistics[0].goals.total}`;
+      $passElement.innerHTML = `Key Passes: ${
+        el.statistics[0].passes.key || "0"
+      }`;
+      $teamElement.innerHTML = `Team: ${el.statistics[0].team.name}`;
+      $logoElement.src = `${el.statistics[0].team.logo}`;
 
+      $imageContainer.appendChild($imageElement);
+      $card.appendChild($imageContainer);
 
-     $fragmentPlayers.appendChild($card);
-        $players.appendChild($fragmentPlayers);
-         });
-    } )
+      $pDataContainer.appendChild($titleElement);
+      $pDataContainer.appendChild($natElement);
+      $pDataContainer.appendChild($logoElement);
+      $card.appendChild($pDataContainer);
 
-    
+      $statsContainer.appendChild($ageElement);
+      $statsContainer.appendChild($posElement);
+      $statsContainer.appendChild($appereanceElement);
+      $statsContainer.appendChild($appereanceMElement);
+      $statsContainer.appendChild($goalsElement);
+      $statsContainer.appendChild($passElement);
 
+      $card.appendChild($statsContainer);
 
-    const urlSeason = 'https://api-football-v1.p.rapidapi.com/v3/fixtures?league=140&season=2023&team=529&from=2023-09-28&to=2024-05-31';
-    const optionsSeason = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': 'af731bc557mshd9a9dfe2c0d7552p132b4djsnbd2ecc428ef8',
-            'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
-        }
-    };
-    $fragmentMatches = document.createDocumentFragment();
-    try {
-        fetch(urlSeason,optionsSeason)
-        .then(response => response.json())
-        .then(res => {
-            console.log(res);
-            res.response.forEach(el => {
-                const $matches = document.getElementById("matches");
-       
-                const $goalsElement = document.createElement("div");
+      $fragmentPlayers.appendChild($card);
+      $players.appendChild($fragmentPlayers);
+    });
+  } catch (err) {
+    let message = err.statusText || "Ocurrió un error";
+    console.log(message);
+  } finally {
+  }
+}
 
-                const $dateElement = document.createElement("p");
-                const $leagueElement = document.createElement("p");
+getDataPlayers();
 
-                const $homeElement = document.createElement("h2");
-                const $awayElement = document.createElement("h2");
-                const $spaceElement = document.createElement("h1");
+/*Season*/
 
-                const $homeimgElement = document.createElement("img");
-                const $awayimgElement = document.createElement("img");
+const urlSeason =
+  "https://api-football-v1.p.rapidapi.com/v3/fixtures?league=140&season=2023&team=529&from=2023-09-28&to=2024-05-31";
+const optionsSeason = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "af731bc557mshd9a9dfe2c0d7552p132b4djsnbd2ecc428ef8",
+    "X-RapidAPI-Host": "api-football-v1.p.rapidapi.com",
+  },
+};
+$fragmentMatches = document.createDocumentFragment();
 
+async function getDataSeason() {
+  try {
+    let res = await fetch(urlSeason, optionsSeason);
+    json = await res.json();
 
-                $goalsElement.classList.add('goals');
-              
-                $homeimgElement.classList.add('home');
-                $awayimgElement.classList.add('away');
+    json.response.forEach((el) => {
+      const $matches = document.getElementById("matches");
 
-                $dateElement.innerHTML= el.fixture.date.substring(0,10);
-                $leagueElement.innerHTML= el.league.name;
+      const $goalsElement = document.createElement("div");
 
-                $homeElement.innerHTML= el.goals.home || `0`;
-                $awayElement.innerHTML= el.goals.away || `0`;
-                $spaceElement.innerHTML=` - `;
+      const $dateElement = document.createElement("p");
+      const $leagueElement = document.createElement("p");
 
-                $homeimgElement.src = `${el.teams.home.logo}`;
-                $awayimgElement.src = `${el.teams.away.logo}`;
+      const $homeElement = document.createElement("h2");
+      const $awayElement = document.createElement("h2");
+      const $spaceElement = document.createElement("h1");
 
+      const $homeimgElement = document.createElement("img");
+      const $awayimgElement = document.createElement("img");
 
+      $goalsElement.classList.add("goals");
 
-                $goalsElement.appendChild($dateElement);
-                $goalsElement.appendChild($leagueElement);
+      $homeimgElement.classList.add("home");
+      $awayimgElement.classList.add("away");
 
-                $goalsElement.appendChild($homeimgElement)
-                $goalsElement.appendChild($homeElement);
-                $goalsElement.appendChild($spaceElement);
-                $goalsElement.appendChild($awayElement);
-                $goalsElement.appendChild($awayimgElement)
+      $dateElement.innerHTML = el.fixture.date.substring(0, 10);
+      $leagueElement.innerHTML = el.league.name;
 
-                $matches.appendChild($fragmentMatches)
-             
-                $matches.appendChild($goalsElement)
-            
-         
+      $homeElement.innerHTML = el.goals.home || `0`;
+      $awayElement.innerHTML = el.goals.away || `0`;
+      $spaceElement.innerHTML = ` - `;
 
+      $homeimgElement.src = `${el.teams.home.logo}`;
+      $awayimgElement.src = `${el.teams.away.logo}`;
 
-             
-            })}  )
-    } catch (error) {
-        console.error(error);
-    }
+      $goalsElement.appendChild($dateElement);
+      $goalsElement.appendChild($leagueElement);
+
+      $goalsElement.appendChild($homeimgElement);
+      $goalsElement.appendChild($homeElement);
+      $goalsElement.appendChild($spaceElement);
+      $goalsElement.appendChild($awayElement);
+      $goalsElement.appendChild($awayimgElement);
+
+      $matches.appendChild($fragmentMatches);
+
+      $matches.appendChild($goalsElement);
+    });
+  } catch (err) {
+    let message = err.statusText || "Ocurrió un error";
+    console.log(message);
+  } finally {
+  }
+}
+
+getDataSeason();

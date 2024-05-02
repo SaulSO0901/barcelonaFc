@@ -1,0 +1,242 @@
+@media only screen and (max-width: 1150px) {
+
+    .image-container-history img {
+      height: 60%;
+    }
+  
+    .row h2 {
+      font-size: large;
+    }
+  
+    .card p {
+      max-width: 80px;
+      width: 100%;
+    }
+  
+    .player-data p {
+      font-size: medium;
+    }
+  
+    .stats p {
+      font-size: small;
+    }
+  
+    .logo {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+  
+  @media only screen and (max-width: 905px) {
+  
+    .card h2 {
+      margin-left: 0px;
+      width: 100px;
+      font-size: medium;
+    }
+  
+    .card p {
+      max-width: 60px;
+      width: 100%;
+      margin-left: 15px;
+    }
+  
+    .player-data {
+      width: 250px;
+    }
+  .apper{
+    display:none;
+  }
+  .apperM{
+  display: flex;
+  }
+    .logo {
+      margin-left: 20px;
+      margin-right: 0px;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 768px) {
+    /* For tablets: */
+  
+    #navbar-links {
+      display: none;
+    }
+  
+    .container-side {
+      display: flex;
+    }
+  
+    .container-history {
+      flex-direction: column;
+    }
+  
+    #footer {
+      height: fit-content;
+      padding-bottom: 20px;
+      
+    }
+  
+    #footer-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+    }
+  
+    #footer h3 {
+      font-size: medium;
+    }
+  
+    #footer a {
+      font-size: small;
+    }
+  
+    #footer-logo {
+      display: none;
+    }
+  
+    .right {
+      margin-left: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 730px) {
+    /* For tablets: */
+  
+    .card p {
+      max-width: 60px;
+      margin-left: 10px;
+      font-size: small;
+    }
+  }
+  
+  @media only screen and (max-width: 680px) {
+  
+    .title h1 {
+      font-size: 50px;
+    }
+  
+    #title-history h1 {
+      font-size: 50px;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    #image-container-honours img {
+      height: 400px;
+    }
+  
+    .trophy {
+      width: 100%;
+      height: 600px;
+      margin-top: auto;
+  
+    }
+  
+    #image-container-legend img {
+      height: 600px;
+    }
+  
+    .title-list h1 {
+      font-size: 50px;
+    }
+  
+    .list-legend {
+      font-size: medium;
+    }
+  
+    .player-data {
+      display: flex;
+      flex-direction: column;
+      min-width: 100px;
+      margin-left: 0px;
+      text-align: left;
+    }
+  
+    .player-data h2 {
+      width: fit-content;
+      margin-left: 0px;
+      margin-bottom: 0px;
+      font-size: medium;
+    }
+  
+    .player-data p {
+      margin-top: 0px;
+      margin-left: 0px;
+      font-size: small;
+    }
+  
+    .stats {
+      display: none;
+    }
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 430px) {
+    #navbar-logo img {
+      margin-left: 15px;
+    }
+  
+    #main h1 {
+      font-size: 30px;
+    }
+  
+    .title {
+      height: 20px;
+    }
+  
+    #image-container-honours img {
+      height: 200px;
+    }
+  
+    .trophy {
+      width: 100%;
+      height: 400px;
+      margin: auto;
+    }
+  
+    .title-list {
+      height: 20px;
+    }
+  
+    #image-container-legend img {
+      height: 400px;
+    }
+  
+    .list-legend {
+      width: 200px;
+      font-size: small;
+    }
+    
+  
+    #matches p {
+      font-size: medium;
+    }
+  
+    .right {
+      margin-left: 0%;
+    }
+  
+    .footer-column {
+      margin-right: 10px;
+  
+    }
+  }
+  
+  
+  
+  
+  @media only screen and (max-width: 320px) {
+    #main {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+  
+    #footer {
+      padding: 5px;
+    }
+  }
